@@ -1,6 +1,6 @@
 package com.example.SampleProject.service;
 
-import com.example.SampleProject.Exception.ProductNotFoundException;
+import com.example.SampleProject.exception.ProductNotFoundException;
 import com.example.SampleProject.model.Product;
 import javax.jws.WebMethod;
 import javax.jws.WebService;

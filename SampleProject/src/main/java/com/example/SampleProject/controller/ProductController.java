@@ -1,6 +1,5 @@
 package com.example.SampleProject.controller;
-import com.aerospike.client.AerospikeClient;
-import com.example.SampleProject.Exception.ProductNotFoundException;
+import com.example.SampleProject.exception.ProductNotFoundException;
 import com.example.SampleProject.model.Product;
 import com.example.SampleProject.service.ProductRestService;
 import com.example.SampleProject.service.ProductRestServiceImp;

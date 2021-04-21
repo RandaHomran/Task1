@@ -1,5 +1,4 @@
 package com.example.SampleProject.service;
-
 import com.aerospike.client.AerospikeClient;
 import com.aerospike.client.Bin;
 import com.aerospike.client.Key;

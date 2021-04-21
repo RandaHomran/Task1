@@ -1,7 +1,7 @@
 package com.example.SampleProject.service;
 import com.aerospike.client.*;
 import com.aerospike.client.policy.WritePolicy;
-import com.example.SampleProject.Exception.ProductNotFoundException;
+import com.example.SampleProject.exception.ProductNotFoundException;
 import com.example.SampleProject.model.Product;
 import javax.jws.WebService;
 
