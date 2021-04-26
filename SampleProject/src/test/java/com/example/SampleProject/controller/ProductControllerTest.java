@@ -5,7 +5,6 @@ import com.jayway.restassured.config.RestAssuredConfig;
 import org.json.simple.JSONObject;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
-
 import static com.jayway.restassured.RestAssured.given;
 import static com.jayway.restassured.RestAssured.when;
 import static com.jayway.restassured.config.EncoderConfig.encoderConfig;
@@ -24,18 +23,18 @@ public class ProductControllerTest {
 
     @Test
     public void testAddProduct() throws Exception {
-
         JSONObject request = new JSONObject();
         request.put("id", 1);
         request.put("name", "product1");
         request.put("price", 4000);
 
         given().
-                urlEncodingEnabled(false).
-                body(request.toJSONString()).
-                when().
-                post("/rest/products").
-                then().statusCode(200);
+            urlEncodingEnabled(false).
+            body(request.toJSONString()).
+        when().
+            post("/rest/products").
+        then().
+            statusCode(200);
     }
 
     @Test
