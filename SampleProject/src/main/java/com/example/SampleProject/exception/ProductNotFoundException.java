@@ -11,7 +11,7 @@ public class ProductNotFoundException extends Exception implements
     private static final long serialVersionUID = 1L;
 
     public ProductNotFoundException() {
-        super("No File found with given name !!");
+        super("No product found with given name !!");
     }
 
     public ProductNotFoundException(String string) {
@@ -24,3 +24,5 @@ public class ProductNotFoundException extends Exception implements
                 .type("text/plain").build();
     }
 }
+
+

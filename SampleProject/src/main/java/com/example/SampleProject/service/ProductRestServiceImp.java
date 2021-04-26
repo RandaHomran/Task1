@@ -25,6 +25,7 @@ public class ProductRestServiceImp implements ProductRestService {
     public Product get(int productId) {
         Key userKey = new Key("test", "products", productId);
         Record productRecord = client.get(null, userKey);
+
         if(productRecord != null) {
             return (Product) productRecord.getValue("Product");
         }

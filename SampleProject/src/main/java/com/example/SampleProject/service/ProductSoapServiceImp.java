@@ -12,10 +12,10 @@ public class ProductSoapServiceImp implements ProductSoapService {
 
     //to delete a product by id
     @Override
-    public boolean delete(int productId) throws ProductNotFoundException {
+    public boolean deleteProduct(int productId) throws ProductNotFoundException {
         WritePolicy wPolicy = new WritePolicy();
         Key key = new Key("test", "products", productId);
-        boolean isDeleted= client.delete(wPolicy, key);
+        boolean isDeleted = client.delete(wPolicy, key);
         if(!isDeleted){
             throw new ProductNotFoundException( "product with id number ="+ productId +" not found");
         }
@@ -24,10 +24,10 @@ public class ProductSoapServiceImp implements ProductSoapService {
 
     //to update the price of a specific product
     @Override
-    public Product updatePrice(int price, int productId) throws ProductNotFoundException {
+    public Product updateProductPrice(int price, int productId) throws ProductNotFoundException {
         Key productKey = new Key("test", "products", productId);
         Record productRecord = client.get(null, productKey);
-        if(productRecord==null){
+        if(productRecord == null){
             throw new ProductNotFoundException( "product with id number ="+ productId +" not found");
         }
         Product product = (Product) productRecord.getValue("Product");

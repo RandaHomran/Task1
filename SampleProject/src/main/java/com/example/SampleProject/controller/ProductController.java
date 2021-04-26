@@ -12,26 +12,37 @@ public class ProductController {
 
     private ProductRestService productService = new ProductRestServiceImp();
 
-    //to get a specific item
+    /**
+     * Get request to get a specific product
+     * @param id product id number
+     * @return HTTP 200 OK success status response contains the requested product object
+     * @throws ProductNotFoundException when the product not found or it is null
+     */
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response get(@PathParam("id") int id) throws ProductNotFoundException {
+    public Response getProduct(@PathParam("id") int id) throws ProductNotFoundException {
         Product product = productService.get(id);
         if (product != null) {
             return Response.ok(product, MediaType.APPLICATION_JSON).build();
         }
 
         else {
-            throw new ProductNotFoundException( "product with id number ="+ id +" not found");
+            throw new ProductNotFoundException( "product with id number = "+ id +" not found");
         }
     }
-    //to add a new item
+
+    /**
+     * post request to add a new product to the database
+     * @param product product object to add it.
+     * @return HTTP 200 OK success status response contains product object
+     * @throws URISyntaxException
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response add(Product product) throws URISyntaxException {
-        Product p= productService.add(product);
-        return Response.ok(product, MediaType.APPLICATION_JSON).build();
+    public Response addProduct(Product product) throws URISyntaxException {
+        Product p = productService.add(product);
+        return Response.ok(p , MediaType.APPLICATION_JSON).build();
     }
 
 }

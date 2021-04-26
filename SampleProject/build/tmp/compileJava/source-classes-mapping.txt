@@ -2,8 +2,8 @@ com/example/SampleProject/service/ProductRestService.java
  com.example.SampleProject.service.ProductRestService
 com/example/SampleProject/controller/ProductController.java
  com.example.SampleProject.controller.ProductController
-com/example/SampleProject/Exception/ProductNotFoundException.java
- com.example.SampleProject.Exception.ProductNotFoundException
+com/example/SampleProject/exception/ProductNotFoundException.java
+ com.example.SampleProject.exception.ProductNotFoundException
 com/example/SampleProject/service/ProductSoapService.java
  com.example.SampleProject.service.ProductSoapService
 com/example/SampleProject/model/Product.java

@@ -10,7 +10,7 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface ProductSoapService {
     @WebMethod
-    public boolean delete(int id) throws ProductNotFoundException;
+    public boolean deleteProduct(int id) throws ProductNotFoundException;
     @WebMethod
-    public Product updatePrice(int price,int productId) throws ProductNotFoundException;
+    public Product updateProductPrice(int price,int productId) throws ProductNotFoundException;
 }
